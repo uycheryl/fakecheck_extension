@@ -1,0 +1,13 @@
+{
+    "name": "Fake Check",
+    "version": "1.0",
+    "description": "An extension to help you detect Filipino fake news in the Internet.",
+    "manifest_version": 2,
+    "permissions": ["activeTab", "tabs"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    }
+  
+}
+  
