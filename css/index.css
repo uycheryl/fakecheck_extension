@@ -1,0 +1,107 @@
+body{
+    width: 275px;
+    height:500px;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    padding:0;
+}
+
+.headerInfo{
+    margin:0;
+    height:15%;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    
+}
+
+.name{
+    font-size: 1.45rem;
+}
+
+.bodyInfo{
+    margin:0;
+    height:20%;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom: 1px solid lightgray;    
+}
+
+.instruction{
+    height:30%;
+}
+
+.btn-red{
+    height: 50%;
+    width: 90%;
+}
+
+.reportInfo{
+    height:55%;
+    margin-top:50px;
+}
+
+.cancelInfo{
+  margin-top:10px;
+}
+
+.placeholder{
+    margin:0;
+    height:170px;
+    width:170px;
+    opacity: 50%;
+}
+
+.validityBox{
+	display: none;
+}
+
+.validityBoxVis{
+	margin:0 auto;
+	margin-top:10px;
+	height:10%;
+	width:250px;
+}
+
+.rp_text{
+  cursor: pointer;
+}
+
+#bar{
+  margin-top:10px;
+}
+
+/* Spinner */
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    background-color: rgb(184, 32, 32);
+  
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes sk-scaleout {
+    0% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
