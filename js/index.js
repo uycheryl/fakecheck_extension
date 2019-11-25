@@ -53,7 +53,7 @@ function renderLoading() {
 
 function renderReport(data, status_code) {
 
-	var validated_str;"Click again to report the article")
+	var validated_str;
 	var report_available = false;
 	var info_available = 'The article has already been reported';
 	var modified_probability = data.model_probability/100;
