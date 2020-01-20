@@ -14,13 +14,15 @@ $(document).ready(function () {
 	
 	$("#bodyInfo").on('click','#checkNews', function () {
 
+		$("#checkNews").attr("disabled", true);
+
 		chrome.tabs.query({
 			active: true,
 			currentWindow: true
 		}, function (tabs) {
 			var news_url = tabs[0].url;
 
-			url = "http://127.0.0.1:8000/api/urls/check/";
+			url = "http://fakescore.tech/api/urls/check/";
 			post_data = { news_url: news_url };
 
 			let ajax_data = $.ajax(url, {
@@ -75,7 +77,7 @@ function renderReport(data, status_code) {
 	$(".reportInfo").hide();
 	
 	$("#buttonLabel").text(info_available);
-	$("#checkNews").replaceWith('<button type="button" id="reportNews"'+ (report_available ? "" : ' disabled ') +'class="btn btn-red btn-danger">Report News Article</button>');
+	$("#checkNews").replaceWith('<button type="button" id="reportNews"'+ (report_available ? "" : ' disabled ') +'class="btn btn-red btn-danger btn-inside-size">Report News Article</button>');
 	
 	$("#validityInfo").html(url_valid);
 	$("#probabilityInfo").html(probability);
@@ -94,7 +96,7 @@ function renderReport(data, status_code) {
 	$("#cancelInfo").fadeIn(500);
 
 	var bar = new RadialProgress(document.getElementById("bar"), { colorFg: "#aa0f0f", colorBg: "#585858", colorText: "#202020", round: true, thick: 2, progress: 0.0 });
-	// // bar.noPercentage = !bar.noPercentage
+	// bar.noPercentage = !bar.noPercentage
 	// bar.setText("Real")
 	bar.draw(true);
 	bar.setValue(modified_probability);
@@ -109,12 +111,12 @@ function renderReport(data, status_code) {
 
 	$("#bodyInfo").on('click', '#reportNews', function(){
 
-		url = "http://127.0.0.1:8000/api/urls/report/";
+		url = "http://fakescore.tech/api/urls/report/";
 		post_data = {
 			news_url: data.url.news_url,
 			article_content: data.article_content,
-			pred: data.model_prediction,
-			prob: data.model_probability
+			model_prediction: data.model_prediction,
+			model_probability: data.model_probability
 		};
 		let ajax_data = $.ajax(url, {
 			type: 'POST',
@@ -138,11 +140,11 @@ function clearElements(){
 	$("#cancelInfo").fadeOut(300,()=>{$("#cancelInfo").html("");});
 	$("#buttonLabel").fadeOut(300, ()=>{
 		$("#buttonLabel").text("Click to check Fakescore!")
-	});
+	})
 	$("#reportNews").fadeOut(300, ()=>{
-		$("#reportNews").replaceWith('<button type="button" id="checkNews" class="btn btn-red btn-danger">Check Fakescore</button>');		
+		$("#reportNews").replaceWith('<button type="button" id="checkNews" class="btn btn-block btn-inside-size btn-gradient">Check News</button>');		
 		$("#reportNews").fadeIn(300);
-		$("#reportInfo").html('<img src="static/circul.png" class="placeholder">');
+		$("#reportInfo").html('<img src="static/logo512.png" class="placeholder">');
 		$("#buttonLabel").fadeIn(300);
 		$("#reportInfo").fadeIn(300);
 	});

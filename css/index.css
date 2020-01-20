@@ -31,12 +31,38 @@ body{
 }
 
 .instruction{
-    height:30%;
+    text-align: center;
+    height:40%;
+    font-size: medium;
 }
 
-.btn-red{
-    height: 50%;
+.btn-size{
+    height: 70%;
     width: 90%;
+}
+
+.btn-inside-size{
+  height:100%;
+  width:100%;
+}
+
+.btn-gradient{
+    background: #4776E6;  /* fallback for old browsers */
+	  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+	  background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:white;
+    font-weight: 500;
+}
+
+.padding-inside{
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+top-buffer-10{
+  margin-top: 10px;
 }
 
 .reportInfo{
@@ -45,14 +71,13 @@ body{
 }
 
 .cancelInfo{
-  margin-top:10px;
+  margin-top:20px;
 }
 
 .placeholder{
     margin:0;
-    height:170px;
-    width:170px;
-    opacity: 50%;
+    height:200px;
+    width:200px;
 }
 
 .validityBox{
@@ -71,7 +96,7 @@ body{
 }
 
 #bar{
-  margin-top:10px;
+  margin-top:15px;
 }
 
 /* Spinner */
@@ -80,7 +105,7 @@ body{
     width: 100px;
     height: 100px;
     margin: 50px auto;
-    background-color: rgb(184, 32, 32);
+    background-color: rgb(82, 143, 212);
   
     border-radius: 100%;  
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;

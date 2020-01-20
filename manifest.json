@@ -1,19 +1,20 @@
 {
-    "name": "Fakescore",
-    "version": "1.0",
-    "description": "An extension to help you detect Filipino fake news in the Internet.",
+    "name": "Fake Check",
+    "version": "0.0.0.2",
+    "description": "An extension to help you detect fake news written in the Filipino language.",
     "manifest_version": 2,
+    "icons":{
+        "192":"static/logo192.png",
+        "512":"static/logo512.png"
+    },
     "permissions": [
         "activeTab", 
         "tabs",
-        "http://127.0.0.1:8000/api/"],
+        "http://fakescore.tech/api/"],
     "browser_action": {
-        "default_title": "Fakescore",
+        "default_title": "Fake Check",
         "default_popup": "index.html",
-        "default_icon": "icon.png"
+        "default_icon": "static/logo192.png"
     }
-    
-    
-  
 }
   
